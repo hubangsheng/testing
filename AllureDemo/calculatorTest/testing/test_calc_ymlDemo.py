@@ -40,11 +40,11 @@ class TestCalculator:
     def teardown_class(self):
         print("结束测试")
 
+    # @pytest.mark.p0 为测试用例添加标签
     @pytest.mark.p0
     @pytest.mark.parametrize("x,y,expect", add_P0_datas,ids=add_P0_ids)
     def test_add0(self, x, y, expect):
         # 测试相加方法
-        # calc = Calculator()
         result = self.calc.add(x, y)
         print(result)
         assert result == expect
@@ -63,6 +63,8 @@ class TestCalculator:
         with pytest.raises(eval(errortype)) as e:
             result = self.calc.add(x, y)
 
+    # @pytest.mark.run(order=2)  为测试用例添加执行顺序
+    @pytest.mark.run(order=2)
     @pytest.mark.p2
     @pytest.mark.parametrize("x,y,errortype", add_P2_datas, ids=add_P2_ids)
     def test_add3(self, x, y, errortype):
