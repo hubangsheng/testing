@@ -71,3 +71,4 @@ class TestCalculator:
         # 从yaml中获取到的数据是一个字符串，这里需要通过eval将字符串变成一个类型
         with pytest.raises(eval(errortype)) as e:
             result = self.calc.add(x, y)
+            assert result == errortype

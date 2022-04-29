@@ -1,9 +1,7 @@
 import time
-
 import pytest
 
 from testflxture.pythoncode.calculator import Calculator
-
 
 def pytest_collection_modifyitems(items):
     for item in items:
