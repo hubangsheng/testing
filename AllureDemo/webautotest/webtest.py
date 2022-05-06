@@ -31,7 +31,7 @@ class TestDemo():
         # 浏览器控制
         self.driver.maximize_window()   #最大化浏览器窗口
         self.driver.minimize_window()   #最小化浏览器窗口
-        self.driver.get("URL")          #打开URL
+        # self.driver.get("URL")          #打开URL
         self.driver.refresh()           #刷新当前页面
         self.driver.back()              #后退
         
