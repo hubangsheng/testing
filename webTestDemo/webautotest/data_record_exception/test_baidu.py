@@ -40,10 +40,12 @@ def ui_exception_record(func):
                 f.write(driver.page_source)
 
             # 将截图放到报告的数据中
-            allure.attach.file(image_path, name="pagesource", attachment_type=allure.attachment_type.PNG)
+            allure.attach.file(image_path, name="pagesource",
+                               attachment_type=allure.attachment_type.PNG)
             # 将pagesource 记录到报告中
             # 如果想要 html 源码格式使用text，如果想要页面格式使用html
-            allure.attach.file(page_source_path, name="pagesource", attachment_type=allure.attachment_type.HTML)
+            allure.attach.file(page_source_path, name="pagesource",
+                               attachment_type=allure.attachment_type.HTML)
             raise Exception
     return inner
 
