@@ -24,11 +24,15 @@ def ui_exception_record(func):
         # 通过self就可以拿到声明的实例变量driver
         # 前提条件：1、被装饰的方法是一个实例方法， 2、实例需要有实例变量self.driver
 
+        # 问题：需要通过driver实例截图/打印 page_source，装饰器需要先去获取driver对象：
+        # 两种方案，
+        # 方案一、将driver = args[0].driver放在try...except...的except代码块中
+        # 方案二、将driver的实例对象放在setup_class函数中，在用例一开始的时候就创建这个实例
+        driver = args[0].driver
         try:
             # 当被装饰的方法/函数发生异常就捕获并做数据记录
             return func(*args, **kwargs)
         except Exception:
-            driver = args[0].driver
             timestamp = int(time.time())
             # 注意：需要提前创建好images 目录
             image_path = f"./images/image_{timestamp}.PNG"
