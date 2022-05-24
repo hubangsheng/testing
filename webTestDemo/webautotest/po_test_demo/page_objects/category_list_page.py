@@ -26,6 +26,7 @@ class CategoryListPage(BasePage):
     """类目列表页：获取操作结果"""
 
     def get_operate_result(self):
+        logger.info("类目列表页：获取添加操作结果")
         # 获取冒泡消息文本
         # element = WebDriverWait(self.driver, 10).\
         #     until(expected_conditions.visibility_of_element_located()
@@ -37,11 +38,13 @@ class CategoryListPage(BasePage):
 
     def delete_category(self, category_name):
         # 删除指定商品
+        logger.info(f"删除指定商品:{category_name}")
         self.do_find(By.XPATH, f"//*[text()='{category_name}']/../..//*[text()='删除']").click()
         return CategoryListPage(self.driver)
 
     # 同一个功能，返回结果不一样，根据PO设计原则，需要将这两部分分开写
     def get_delete_result(self):
+        logger.info("类目列表页：获取删除商品操作结果")
         # 获取删除时的冒泡消息文本
         element = self.wait_element_until_visible(self.__MSG_DEL_OPERATE)
         msg = element.text

@@ -7,6 +7,7 @@ from po_test_demo.utils.log_utils import logger
 
 class LoginPage(BasePage):
     """登录页面：用户登录"""
+    logger.info("登录页面：用户登录")
     _BASE_URL = "http://litemall.hogwarts.ceshiren.com"
     __INPUT_USERNAME = (By.NAME, "username")
     __INPUT_PASSWORD = (By.NAME, "password")

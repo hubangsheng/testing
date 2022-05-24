@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 from po_test_demo.page_objects.base_page import BasePage
+from po_test_demo.utils.log_utils import logger
 from po_test_demo.utils.web_util import click_exception
 
 
@@ -13,6 +14,7 @@ class CategoryCreatePage(BasePage):
 
     """创建类目页面：创建类目"""
     def create_category(self, category_name):
+        logger.info(f"创建类目页面：创建{category_name}类目")
         # 输入“类目名称”
         self.do_send_keys(category_name, self.__INPUT_CATEGORY_NAME)
         # 点击“确定”按钮
