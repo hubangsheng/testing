@@ -29,10 +29,19 @@ class TestWeworkLogin:
     def test_add_member_po(self):
         value = self.browser\
             .login()\
-            .click_add()\
+            .click_add_user()\
             .fill_in_info(self.username, self.acctid, self.mobile)\
             .get_tips()
         assert "保存成功" == value
+
+    def test_add_department(self):
+        department_value = self.browser\
+            .login()\
+            .click_add_department()\
+            .click_OK()\
+            .get_department_tips()
+
+        assert "新建部门成功" == department_value
 
     #
     #     self.driver = webdriver.Chrome()
