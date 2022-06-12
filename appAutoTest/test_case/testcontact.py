@@ -87,6 +87,9 @@ class TestContact(BasePage):
         # 1、点击【通讯录】菜单
         self.driver.find_element(AppiumBy.XPATH, "//*[@text='通讯录']").click()
 
+        # 2、点击通讯录页面右上角的搜索按钮
+        self.driver.find_element(AppiumBy.XPATH, "//*[@text='小佛IOS科技']/../../../following-sibling::*/*[1]").click()
+
         # 2、点击通讯录管理图标
         self.driver.find_element(AppiumBy.XPATH, "//*[@resource-id='com.tencent.wework:id/kor']").click()
 
