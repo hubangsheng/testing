@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-from wework_PO_demo.page_objects.login_page import LoginPage
+from webTestDemo.webautotest.wework_PO_demo.page_objects.login_page import LoginPage
 
 
 class TestWeworkLogin:

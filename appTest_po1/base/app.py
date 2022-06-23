@@ -1,11 +1,10 @@
 # __author:lenovo
 # date:2022/6/16
-import logging
-
 from appium import webdriver
 
-from appTest_po1.base.base_page import BasePage
-from appTest_po1.page.main_page import MainPage
+from base.base_page import BasePage
+from page.main_page import MainPage
+from utils.log_util import logger
 
 
 class App(BasePage):
@@ -35,7 +34,7 @@ class App(BasePage):
             # 隐式等待是全局的等待方式
             self.set_implicitly(self.implicitly_wait_time)
         else:
-            logging.info("driver 已存在，复用已有的driver")
+            logger.info("driver 已存在，复用已有的driver")
             # 会自动的启动desire caps里面记录的页面
             self.driver.launch_app()
             # 启动另外一个app的页面

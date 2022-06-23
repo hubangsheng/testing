@@ -2,7 +2,7 @@ from faker import Faker
 
 # pip install Faker
 # Mock 假数据
-from appAutoTest.utils.log_util import logger
+from utils.log_util import logger
 
 
 class ContactInfo:
@@ -20,6 +20,8 @@ class ContactInfo:
         return phonenum
 
 
-# if __name__ == '__main__':
-#     ContactInfo.get_name()
-#     ContactInfo.get_phonenum()
+if __name__ == '__main__':
+    for i in range(10):
+        print(ContactInfo.get_name(), ContactInfo.get_phonenum())
+    # ContactInfo.get_name()
+    # ContactInfo.get_phonenum()

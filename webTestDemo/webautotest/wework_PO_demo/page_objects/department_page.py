@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from wework_PO_demo.page_objects.base_page import BasePage
+from webTestDemo.webautotest.wework_PO_demo.page_objects.base_page import BasePage
 
 
 class DepartmentPage(BasePage):

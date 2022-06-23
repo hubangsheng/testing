@@ -2,8 +2,8 @@
 # date:2022/6/16
 from appium.webdriver.common.appiumby import AppiumBy
 
-from appTest_po1.base.base_page import BasePage
-from appTest_po1.page.add_member_page import AddMemberPage
+from base.base_page import BasePage
+from page.add_member_page import AddMemberPage
 
 
 class EditMemeberPage(BasePage):

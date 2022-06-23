@@ -2,7 +2,8 @@ import time
 
 import yaml
 
-from wework_PO_demo.page_objects.base_page import BasePage
+from webTestDemo.webautotest.wework_PO_demo.page_objects.base_page import BasePage
+
 
 class LoginPage(BasePage):
     _BASE_URL = "https://work.weixin.qq.com/wework_admin/loginpage_wx"
@@ -21,5 +22,5 @@ class LoginPage(BasePage):
         # 4、访问企业微信首页
         self.driver.get(self._BASE_URL)
 
-        from wework_PO_demo.page_objects.home_page import HomePage
+        from webTestDemo.webautotest.wework_PO_demo.page_objects.home_page import HomePage
         return HomePage(self.driver)

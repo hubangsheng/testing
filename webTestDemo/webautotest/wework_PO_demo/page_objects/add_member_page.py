@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
-from wework_PO_demo.page_objects.base_page import BasePage
-from wework_PO_demo.utils.log_utils import logger
+from webTestDemo.webautotest.wework_PO_demo.page_objects.base_page import BasePage
+from webTestDemo.webautotest.wework_PO_demo.utils.log_utils import logger
 
 
 class AddMemberPage(BasePage):
@@ -21,5 +21,5 @@ class AddMemberPage(BasePage):
         # self.driver.find_element(By.ID, "memberAdd_phone").send_keys(mobile)
         # self.driver.find_element(By.XPATH, '//*[text()="保存"]').click()
 
-        from wework_PO_demo.page_objects.contact_page import ContactPage
+        from webTestDemo.webautotest.wework_PO_demo.page_objects.contact_page import ContactPage
         return ContactPage(self.driver)

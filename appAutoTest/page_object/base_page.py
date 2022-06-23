@@ -1,9 +1,7 @@
+from appAutoTest.utils.log_util import logger
 from appium import webdriver
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.common.exceptions import NoSuchElementException
-
-from utils.log_util import logger
-
 
 class BasePage:
     implicitly_wait_time = 30
@@ -18,7 +16,7 @@ class BasePage:
         caps["appPackage"] = "com.tencent.wework"
         caps["appActivity"] = ".launch.LaunchSplashActivity"
         # adb devices
-        caps["deviceName"] = "M2002J9E"
+        caps["deviceName"] = "49a66be1"
         # "True" 是绝对不可以的  要么是"true" 要么是 True
         # 防止清缓存
         caps["noReset"] = "true"

@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from wework_PO_demo.page_objects.base_page import BasePage
+from webTestDemo.webautotest.wework_PO_demo.page_objects.base_page import BasePage
 
 
 class AddDepartmentPage(BasePage):
@@ -24,8 +24,7 @@ class AddDepartmentPage(BasePage):
         # WebDriverWait(self.driver, 10, 2).until(expected_conditions.visibility_of_element_located(loc_tips))
         # tips_value = self.driver.find_element(*loc_tips).text
 
-
-        from wework_PO_demo.page_objects.department_page import DepartmentPage
+        from webTestDemo.webautotest.wework_PO_demo.page_objects.department_page import DepartmentPage
         return DepartmentPage(self.driver)
 
 

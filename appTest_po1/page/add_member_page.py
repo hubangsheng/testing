@@ -2,7 +2,7 @@
 # date:2022/6/16
 from appium.webdriver.common.appiumby import AppiumBy
 
-from appTest_po1.base.base_page import BasePage
+from base.base_page import BasePage
 
 
 class AddMemberPage(BasePage):
@@ -10,7 +10,7 @@ class AddMemberPage(BasePage):
         # 3. 点击【手动输入添加】
         self.find_and_click(AppiumBy.XPATH, "//*[@text='手动输入添加']")
 
-        from appTest_po1.page.edit_member_page import EditMemeberPage
+        from page.edit_member_page import EditMemeberPage
         return EditMemeberPage(self.driver)
 
     def get_text(self):

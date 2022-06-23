@@ -1,7 +1,8 @@
 from selenium.webdriver.common.by import By
 
-from wework_PO_demo.page_objects.base_page import BasePage
-from wework_PO_demo.utils.log_utils import logger
+
+from webTestDemo.webautotest.wework_PO_demo.page_objects.base_page import BasePage
+from webTestDemo.webautotest.wework_PO_demo.utils.log_utils import logger
 
 
 class HomePage(BasePage):
@@ -15,7 +16,8 @@ class HomePage(BasePage):
         self.do_find(self.__MENU_CONTACT).click()
         logger.info("点击添加成员按钮")
         self.do_find(self.__BTN_ADD).click()
-        from wework_PO_demo.page_objects.add_member_page import AddMemberPage
+
+        from webTestDemo.webautotest.wework_PO_demo.page_objects.add_member_page import AddMemberPage
         return AddMemberPage(self.driver)
 
     def click_add_department(self):
@@ -27,7 +29,7 @@ class HomePage(BasePage):
         # 选择“添加部门”下拉列表，并点击
         self.do_find(self.__BTN_ADD_DEPARTMENT).click()
 
-        from wework_PO_demo.page_objects.add_department_page import AddDepartmentPage
+        from webTestDemo.webautotest.wework_PO_demo.page_objects.add_department_page import AddDepartmentPage
         return AddDepartmentPage(self.driver)
 
         # self.driver.find_element(By.CSS_SELECTOR, '.member_colLeft_top_addBtn').click()
