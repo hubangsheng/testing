@@ -8,8 +8,10 @@ from requests import Response
 
 
 def test_response_to_dict():
+    # 不同响应体的请求地址
     # res = requests.get("https://www.nasa.gov/rss/dyn/lg_image_of_the_day.rss")
     res = requests.get("https://httpbin.ceshiren.com/get")
+
     # 注意不是直接打印 res ,而是打印 res 的 text 属性
     final_res = reponse_to_dict(res)
     # 断言响应值是否为dict类型的格式
