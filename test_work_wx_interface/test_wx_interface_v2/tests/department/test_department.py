@@ -2,7 +2,8 @@
 # date:2022/7/22
 import pytest
 """
-编写具体的测试用例
+编写具体的测试
+用例
 """
 
 from test_wx_interface_v2.apis.department.department import Department
